@@ -15,6 +15,8 @@ class GeneradorDeCitas{
         citas_creadas = []
     }
     
+    @IBAction func Add_cita(_ sender: Any) {
+    }
     func agregar_cita(_ que_dijo: String, quien_lo_dijo: String){
         var cita_generada = Cita(quien_lo_dijo: quien_lo_dijo, que_dijo: que_dijo)
         
@@ -38,6 +40,13 @@ class GeneradorDeCitas{
         self.agregar_cita("Solia ser un explorador como tu... Pero me dieron con una flecha en la rodilla",
                           quien_lo_dijo: "Guardia"
         )
+    }
+    
+    func obtener_cita_aleatoria() -> Cita{
+        var cita_para_regresar: Cita
+        cita_para_regresar = citas_creadas[Int.random(in: 0...citas_creadas.count-1)]
+        
+        return cita_para_regresar
     }
     
 }
