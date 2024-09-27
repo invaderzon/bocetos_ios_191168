@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		FB31CBAF2CA1C1F800A5A9BC /* ControladorPantallaCitas.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB31CBAE2CA1C1F800A5A9BC /* ControladorPantallaCitas.swift */; };
+		FBB18F352CA7123E00CCD723 /* ControladorPantallaAgregarCita.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBB18F342CA7123E00CCD723 /* ControladorPantallaAgregarCita.swift */; };
 		FBFFCE8D2C9B2D05003E5350 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBFFCE8C2C9B2D05003E5350 /* AppDelegate.swift */; };
 		FBFFCE8F2C9B2D05003E5350 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBFFCE8E2C9B2D05003E5350 /* SceneDelegate.swift */; };
 		FBFFCE912C9B2D05003E5350 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBFFCE902C9B2D05003E5350 /* ViewController.swift */; };
@@ -40,6 +41,7 @@
 
 /* Begin PBXFileReference section */
 		FB31CBAE2CA1C1F800A5A9BC /* ControladorPantallaCitas.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ControladorPantallaCitas.swift; sourceTree = "<group>"; };
+		FBB18F342CA7123E00CCD723 /* ControladorPantallaAgregarCita.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ControladorPantallaAgregarCita.swift; sourceTree = "<group>"; };
 		FBFFCE892C9B2D05003E5350 /* boceto_1.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = boceto_1.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FBFFCE8C2C9B2D05003E5350 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FBFFCE8E2C9B2D05003E5350 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -86,6 +88,7 @@
 			isa = PBXGroup;
 			children = (
 				FB31CBAE2CA1C1F800A5A9BC /* ControladorPantallaCitas.swift */,
+				FBB18F342CA7123E00CCD723 /* ControladorPantallaAgregarCita.swift */,
 			);
 			path = controladores_de_vistas;
 			sourceTree = "<group>";
@@ -294,6 +297,7 @@
 				FBFFCE912C9B2D05003E5350 /* ViewController.swift in Sources */,
 				FBFFCE8D2C9B2D05003E5350 /* AppDelegate.swift in Sources */,
 				FBFFCEC12C9B36FC003E5350 /* generador_de_citas.swift in Sources */,
+				FBB18F352CA7123E00CCD723 /* ControladorPantallaAgregarCita.swift in Sources */,
 				FBFFCEBF2C9B3659003E5350 /* Cita.swift in Sources */,
 				FBFFCE8F2C9B2D05003E5350 /* SceneDelegate.swift in Sources */,
 				FB31CBAF2CA1C1F800A5A9BC /* ControladorPantallaCitas.swift in Sources */,
