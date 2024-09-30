@@ -12,6 +12,7 @@ class ViewController: UIViewController {
     var citas_disponibles: GeneradorDeCitas = GeneradorDeCitas()
     var numero_aleatorio: Int = Int.random(in: 0...25)
     
+    @IBOutlet weak var labelcito: UILabel!
     override func viewDidLoad() {
         citas_disponibles.generar_citas_falsas()
         super.viewDidLoad()
@@ -33,14 +34,7 @@ class ViewController: UIViewController {
         if let pantalla_agregar_citas = segue.source as? ControladorPantallaAgregarCita{ citas_disponibles.agregar_cita(pantalla_agregar_citas.cita_creada!)
         }
         
-        
-        //print(pantalla_citass?.cita_actual.texto)
-        
-        /*if let pantalla_citass = segue.source as? ControladorPantallaCitas { citas_disponibles.agregar_cita(pantalla_citass.cita_actual.texto, quien_lo_dijo: pantalla_citass.cita_actual.cita_actual.nombre)}
-         }
-         else{
-         print("Eso no era un objeto de tipo <Controllador ")
-         }*/
+    
         
         actualizar_cantidad()
     }
