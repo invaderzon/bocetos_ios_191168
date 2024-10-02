@@ -22,10 +22,16 @@ class ControladorPantallaCitas: UIViewController {
         print("Error: Se ha cargado el default de INIT")
     }
     
+    
+    
     init?(cita_para_citar: Cita, coder: NSCoder){
         self.cita_actual = cita_para_citar
         super.init(coder: coder)
     }
+    
+    
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         

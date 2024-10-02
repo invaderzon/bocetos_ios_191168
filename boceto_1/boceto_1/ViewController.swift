@@ -13,10 +13,11 @@ class ViewController: UIViewController {
     var numero_aleatorio: Int = Int.random(in: 0...25)
     
     @IBOutlet weak var labelcito: UILabel!
+    
     override func viewDidLoad() {
         citas_disponibles.generar_citas_falsas()
         super.viewDidLoad()
-        // Do any additional setup after loading the view
+
         actualizar_cantidad()
     }
     
@@ -26,7 +27,7 @@ class ViewController: UIViewController {
         }
 
     
-    @IBSegueAction func al_abrir_pantalla_citas(_ coder: NSCoder) -> ControladorPantallaCitas? {
+    @IBSegueAction func al_abrir_citas_pantalla(_ coder: NSCoder) -> ControladorPantallaCitas? {
         return ControladorPantallaCitas(cita_para_citar: citas_disponibles.obtener_cita_aleatoria(), coder: coder)
     }
     
