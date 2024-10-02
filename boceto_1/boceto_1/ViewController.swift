@@ -31,12 +31,13 @@ class ViewController: UIViewController {
     }
     
     @IBAction func volver_a_pantalla_inicio(segue: UIStoryboardSegue){
-        if let pantalla_agregar_citas = segue.source as? ControladorPantallaAgregarCita{ citas_disponibles.agregar_cita(pantalla_agregar_citas.cita_creada!)
+        if let pantalla_agregar_citas = segue.source as? ControladorPantallaAgregarCita{
+            if (pantalla_agregar_citas.cita_creada != nil){
+                citas_disponibles.agregar_cita(pantalla_agregar_citas.cita_creada!)
+                actualizar_cantidad()
+            }
         }
         
-    
-        
-        actualizar_cantidad()
     }
     
 }

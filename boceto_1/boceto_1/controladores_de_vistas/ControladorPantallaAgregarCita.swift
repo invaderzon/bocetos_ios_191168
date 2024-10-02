@@ -17,7 +17,7 @@ class ControladorPantallaAgregarCita: UIViewController{
     @IBOutlet weak var que_es_lo_que_dijo: UITextField!
     
     @IBAction func agregar_cita_nueva(_ sender:UIButton){
-        if (quien_lo_dijo_view == nil || que_es_lo_que_dijo == nil){
+        if (quien_lo_dijo_view.text == "" || que_es_lo_que_dijo.text == ""){
         cita_creada = nil
         }
         
