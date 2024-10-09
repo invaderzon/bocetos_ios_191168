@@ -7,20 +7,41 @@
 
 import UIKit
 
-private let identificador_de_celda = "celda_pantalla_principal"
+
 
 class ControladorPantallaPrincipalDeColeccion: UICollectionViewController {
+    
+    private var lista_de_publicaciones: [Publicacion] = []
+    
+    private let url_de_publicaciones = "https://jsonplaceholder.typicode.com/posts"
+    
+    private let identificador_de_celda = "celda_pantalla_principal"
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
+        let ubicacion = URL(string: url_de_publicaciones)!
+        URLSession.shared.dataTask(with: ubicacion) {(datos, respuesta, error)
+            in do {
+                if let publicaciones_recibidas = datos{
+                    let prueba_de_interpretacion_de_datos = try JSONDecoder().decode([Publicacion].self, from: publicaciones_recibidas)
+                    
+                    DispatchQueue.main.async{
+                        print(prueba_de_interpretacion_de_datos)
+                        self.lista_de_publicaciones = prueba_de_interpretacion_de_datos
+                    }
+                    
+                } else {
+                    print("NO recibimos informacion")
+                }
+            }  catch {
+                print("Error")
+            }
+        }.resume()
         
-        // Register cell classes
-        //self.collectionView!.register(UICollectionViewCell.self, forCellWithReuseIdentifier: identificador_de_celda)
         
-        // Do any additional setup after loading the view.
+    
     }
     
     /*
@@ -61,36 +82,36 @@ class ControladorPantallaPrincipalDeColeccion: UICollectionViewController {
     override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath){
         print("Se selaccionó la celda\(indexPath)")
     }
-
-    // MARK: UICollectionViewDelegate
-
-    /*
-    // Uncomment this method to specify if the specified item should be highlighted during tracking
-    override func collectionView(_ collectionView: UICollectionView, shouldHighlightItemAt indexPath: IndexPath) -> Bool {
-        return true
-    }
-    */
-
-    /*
-    // Uncomment this method to specify if the specified item should be selected
-    override func collectionView(_ collectionView: UICollectionView, shouldSelectItemAt indexPath: IndexPath) -> Bool {
-        return true
-    }
-    */
-
-    /*
-    // Uncomment these methods to specify if an action menu should be displayed for the specified item, and react to actions performed on the item
-    override func collectionView(_ collectionView: UICollectionView, shouldShowMenuForItemAt indexPath: IndexPath) -> Bool {
-        return false
-    }
-
-    override func collectionView(_ collectionView: UICollectionView, canPerformAction action: Selector, forItemAt indexPath: IndexPath, withSender sender: Any?) -> Bool {
-        return false
-    }
-
-    override func collectionView(_ collectionView: UICollectionView, performAction action: Selector, forItemAt indexPath: IndexPath, withSender sender: Any?) {
     
-    }
-    */
-
+    // MARK: UICollectionViewDelegate
+    
+    /*
+     // Uncomment this method to specify if the specified item should be highlighted during tracking
+     override func collectionView(_ collectionView: UICollectionView, shouldHighlightItemAt indexPath: IndexPath) -> Bool {
+     return true
+     }
+     */
+    
+    /*
+     // Uncomment this method to specify if the specified item should be selected
+     override func collectionView(_ collectionView: UICollectionView, shouldSelectItemAt indexPath: IndexPath) -> Bool {
+     return true
+     }
+     */
+    
+    /*
+     // Uncomment these methods to specify if an action menu should be displayed for the specified item, and react to actions performed on the item
+     override func collectionView(_ collectionView: UICollectionView, shouldShowMenuForItemAt indexPath: IndexPath) -> Bool {
+     return false
+     }
+     
+     override func collectionView(_ collectionView: UICollectionView, canPerformAction action: Selector, forItemAt indexPath: IndexPath, withSender sender: Any?) -> Bool {
+     return false
+     }
+     
+     override func collectionView(_ collectionView: UICollectionView, performAction action: Selector, forItemAt indexPath: IndexPath, withSender sender: Any?) {
+     
+     }
+     */
+    
 }
