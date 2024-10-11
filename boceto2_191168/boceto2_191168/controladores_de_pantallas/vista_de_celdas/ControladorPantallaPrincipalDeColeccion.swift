@@ -16,7 +16,9 @@ class ControladorPantallaPrincipalDeColeccion: UICollectionViewController {
     private let url_de_publicaciones = "https://jsonplaceholder.typicode.com/posts"
     
     private let identificador_de_celda = "celda_pantalla_principal"
+    //let proveedor_publicaciones = ProveedorDePublicaciones.autoreferencia
     
+    @IBOutlet weak var outlet_a_la_vista: UICollectionView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -27,13 +29,15 @@ class ControladorPantallaPrincipalDeColeccion: UICollectionViewController {
                 if let publicaciones_recibidas = datos{
                     let prueba_de_interpretacion_de_datos = try JSONDecoder().decode([Publicacion].self, from: publicaciones_recibidas)
                     
-                    DispatchQueue.main.async{
-                        print(prueba_de_interpretacion_de_datos)
-                        self.lista_de_publicaciones = prueba_de_interpretacion_de_datos
+                    self.lista_de_publicaciones = prueba_de_interpretacion_de_datos
+                    
+                    DispatchQueue.main.async {
+                    
+                    self.collectionView.reloadData()
                     }
                     
                 } else {
-                    print("NO recibimos informacion")
+                    print(respuesta)
                 }
             }  catch {
                 print("Error")
@@ -58,13 +62,13 @@ class ControladorPantallaPrincipalDeColeccion: UICollectionViewController {
     
     override func numberOfSections(in collectionView: UICollectionView) -> Int {
         // #warning Incomplete implementation, return the number of sections
-        return 2
+        return 1
     }
     
     
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of items
-        return 10
+        return self.lista_de_publicaciones.count
     }
     
     // Función paraa identificar y crear cada una de las celdas creadas en el Controlador
@@ -74,13 +78,19 @@ class ControladorPantallaPrincipalDeColeccion: UICollectionViewController {
         // Configure the cell
         //celda.backgroundColor = UIColor.green //Se puede poner con un solo punto para indicar que es un color
         
-        celda.etiqueta.text = "\(indexPath)"
+        celda.titulo.text = self.lista_de_publicaciones[indexPath.item].title
+        celda.cuerpo.text = self.lista_de_publicaciones[indexPath.item].body
         
         return celda
     }
     
     override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath){
         print("Se selaccionó la celda\(indexPath)")
+        
+        //let pantalla_de_publicacion = storyboard?.instantiateViewController(withIdentifier: "PantallaPublicacion") as! ControladorPantallaDelPost
+        
+        //self.navigationController?.pushViewController(pantalla_de_publicacion, animated: true)
+        print(self.navigationController)
     }
     
     // MARK: UICollectionViewDelegate

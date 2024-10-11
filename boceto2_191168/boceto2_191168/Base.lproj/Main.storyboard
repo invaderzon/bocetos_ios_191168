@@ -46,8 +46,15 @@
                                     <rect key="frame" x="0.0" y="0.0" width="282" height="235"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xby-q9-kTF">
-                                            <rect key="frame" x="120" y="107" width="42" height="21"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hAk-4E-NQ9">
+                                            <rect key="frame" x="120" y="161" width="42" height="21"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xby-q9-kTF">
+                                            <rect key="frame" x="120" y="37" width="42" height="21"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
@@ -61,7 +68,8 @@
                                 </collectionViewCellContentView>
                                 <size key="customSize" width="282" height="235"/>
                                 <connections>
-                                    <outlet property="etiqueta" destination="Xby-q9-kTF" id="dly-Ec-ZWV"/>
+                                    <outlet property="cuerpo" destination="hAk-4E-NQ9" id="CNm-Ud-LGP"/>
+                                    <outlet property="titulo" destination="Xby-q9-kTF" id="CJB-PI-9RT"/>
                                 </connections>
                             </collectionViewCell>
                         </cells>

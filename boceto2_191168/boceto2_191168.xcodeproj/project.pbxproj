@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		FB29CDD22CB6D92C00A8A7F3 /* posts.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB29CDD12CB6D92C00A8A7F3 /* posts.swift */; };
+		FB3FE1E52CB985CD0068AC68 /* EstiloCellViewControllerCelular.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB3FE1E42CB985CD0068AC68 /* EstiloCellViewControllerCelular.swift */; };
 		FBF8551E2CB433CE00E6122F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBF8551D2CB433CE00E6122F /* AppDelegate.swift */; };
 		FBF855202CB433CE00E6122F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBF8551F2CB433CE00E6122F /* SceneDelegate.swift */; };
 		FBF855252CB433CE00E6122F /* Base in Resources */ = {isa = PBXBuildFile; fileRef = FBF855242CB433CE00E6122F /* Base */; };
@@ -39,6 +40,7 @@
 
 /* Begin PBXFileReference section */
 		FB29CDD12CB6D92C00A8A7F3 /* posts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = posts.swift; sourceTree = "<group>"; };
+		FB3FE1E42CB985CD0068AC68 /* EstiloCellViewControllerCelular.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EstiloCellViewControllerCelular.swift; sourceTree = "<group>"; };
 		FBF8551A2CB433CE00E6122F /* boceto2_191168.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = boceto2_191168.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FBF8551D2CB433CE00E6122F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FBF8551F2CB433CE00E6122F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -86,6 +88,14 @@
 				FB29CDD12CB6D92C00A8A7F3 /* posts.swift */,
 			);
 			path = Modelos;
+			sourceTree = "<group>";
+		};
+		FB3FE1E12CB984BD0068AC68 /* estilos */ = {
+			isa = PBXGroup;
+			children = (
+				FB3FE1E42CB985CD0068AC68 /* EstiloCellViewControllerCelular.swift */,
+			);
+			path = estilos;
 			sourceTree = "<group>";
 		};
 		FBF855112CB433CE00E6122F = {
@@ -151,6 +161,7 @@
 		FBF8554E2CB436EB00E6122F /* vista_de_celdas */ = {
 			isa = PBXGroup;
 			children = (
+				FB3FE1E12CB984BD0068AC68 /* estilos */,
 				FBF8554F2CB4376A00E6122F /* ControladorPantallaPrincipalDeColeccion.swift */,
 				FBF855512CB43D7C00E6122F /* VistaDeZelda.swift */,
 			);
@@ -293,6 +304,7 @@
 				FB29CDD22CB6D92C00A8A7F3 /* posts.swift in Sources */,
 				FBF855522CB43D7C00E6122F /* VistaDeZelda.swift in Sources */,
 				FBF855502CB4376A00E6122F /* ControladorPantallaPrincipalDeColeccion.swift in Sources */,
+				FB3FE1E52CB985CD0068AC68 /* EstiloCellViewControllerCelular.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
