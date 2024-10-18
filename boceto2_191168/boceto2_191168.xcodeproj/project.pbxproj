@@ -9,6 +9,9 @@
 /* Begin PBXBuildFile section */
 		FB29CDD22CB6D92C00A8A7F3 /* posts.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB29CDD12CB6D92C00A8A7F3 /* posts.swift */; };
 		FB3FE1E52CB985CD0068AC68 /* EstiloCellViewControllerCelular.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB3FE1E42CB985CD0068AC68 /* EstiloCellViewControllerCelular.swift */; };
+		FBDD345F2CC2B9FF00A79761 /* provedor_publicaciones.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBDD345E2CC2B9FF00A79761 /* provedor_publicaciones.swift */; };
+		FBDD34612CC2BAA100A79761 /* ControladorPantallaDelPost.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBDD34602CC2BAA100A79761 /* ControladorPantallaDelPost.swift */; };
+		FBDD34632CC2BB1100A79761 /* mod_navegador_principal.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBDD34622CC2BB1100A79761 /* mod_navegador_principal.swift */; };
 		FBF8551E2CB433CE00E6122F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBF8551D2CB433CE00E6122F /* AppDelegate.swift */; };
 		FBF855202CB433CE00E6122F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBF8551F2CB433CE00E6122F /* SceneDelegate.swift */; };
 		FBF855252CB433CE00E6122F /* Base in Resources */ = {isa = PBXBuildFile; fileRef = FBF855242CB433CE00E6122F /* Base */; };
@@ -41,6 +44,9 @@
 /* Begin PBXFileReference section */
 		FB29CDD12CB6D92C00A8A7F3 /* posts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = posts.swift; sourceTree = "<group>"; };
 		FB3FE1E42CB985CD0068AC68 /* EstiloCellViewControllerCelular.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EstiloCellViewControllerCelular.swift; sourceTree = "<group>"; };
+		FBDD345E2CC2B9FF00A79761 /* provedor_publicaciones.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = provedor_publicaciones.swift; sourceTree = "<group>"; };
+		FBDD34602CC2BAA100A79761 /* ControladorPantallaDelPost.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ControladorPantallaDelPost.swift; sourceTree = "<group>"; };
+		FBDD34622CC2BB1100A79761 /* mod_navegador_principal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = mod_navegador_principal.swift; sourceTree = "<group>"; };
 		FBF8551A2CB433CE00E6122F /* boceto2_191168.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = boceto2_191168.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FBF8551D2CB433CE00E6122F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FBF8551F2CB433CE00E6122F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -94,8 +100,17 @@
 			isa = PBXGroup;
 			children = (
 				FB3FE1E42CB985CD0068AC68 /* EstiloCellViewControllerCelular.swift */,
+				FBDD34622CC2BB1100A79761 /* mod_navegador_principal.swift */,
 			);
 			path = estilos;
+			sourceTree = "<group>";
+		};
+		FBDD345D2CC2B97100A79761 /* proveedor */ = {
+			isa = PBXGroup;
+			children = (
+				FBDD345E2CC2B9FF00A79761 /* provedor_publicaciones.swift */,
+			);
+			path = proveedor;
 			sourceTree = "<group>";
 		};
 		FBF855112CB433CE00E6122F = {
@@ -121,6 +136,7 @@
 		FBF8551C2CB433CE00E6122F /* boceto2_191168 */ = {
 			isa = PBXGroup;
 			children = (
+				FBDD345D2CC2B97100A79761 /* proveedor */,
 				FB29CDD02CB6D8F600A8A7F3 /* Modelos */,
 				FBF8554D2CB4368700E6122F /* controladores_de_pantallas */,
 				FBF8551D2CB433CE00E6122F /* AppDelegate.swift */,
@@ -153,7 +169,9 @@
 		FBF8554D2CB4368700E6122F /* controladores_de_pantallas */ = {
 			isa = PBXGroup;
 			children = (
+				FB3FE1E12CB984BD0068AC68 /* estilos */,
 				FBF8554E2CB436EB00E6122F /* vista_de_celdas */,
+				FBDD34602CC2BAA100A79761 /* ControladorPantallaDelPost.swift */,
 			);
 			path = controladores_de_pantallas;
 			sourceTree = "<group>";
@@ -161,7 +179,6 @@
 		FBF8554E2CB436EB00E6122F /* vista_de_celdas */ = {
 			isa = PBXGroup;
 			children = (
-				FB3FE1E12CB984BD0068AC68 /* estilos */,
 				FBF8554F2CB4376A00E6122F /* ControladorPantallaPrincipalDeColeccion.swift */,
 				FBF855512CB43D7C00E6122F /* VistaDeZelda.swift */,
 			);
@@ -302,8 +319,11 @@
 				FBF8551E2CB433CE00E6122F /* AppDelegate.swift in Sources */,
 				FBF855202CB433CE00E6122F /* SceneDelegate.swift in Sources */,
 				FB29CDD22CB6D92C00A8A7F3 /* posts.swift in Sources */,
+				FBDD345F2CC2B9FF00A79761 /* provedor_publicaciones.swift in Sources */,
+				FBDD34612CC2BAA100A79761 /* ControladorPantallaDelPost.swift in Sources */,
 				FBF855522CB43D7C00E6122F /* VistaDeZelda.swift in Sources */,
 				FBF855502CB4376A00E6122F /* ControladorPantallaPrincipalDeColeccion.swift in Sources */,
+				FBDD34632CC2BB1100A79761 /* mod_navegador_principal.swift in Sources */,
 				FB3FE1E52CB985CD0068AC68 /* EstiloCellViewControllerCelular.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
