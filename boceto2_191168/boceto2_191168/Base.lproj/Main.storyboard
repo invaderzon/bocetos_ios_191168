@@ -92,13 +92,76 @@
                     <view key="view" contentMode="scaleToFill" id="Wqh-MC-M5S">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Título de Publicación " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NcR-U2-Vd9">
+                                <rect key="frame" x="16" y="81" width="361" height="27.666666666666671"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Texto del cuerpo de la publicación" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="10" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hQU-Jp-o4H">
+                                <rect key="frame" x="16" y="160" width="361" height="20.333333333333343"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="2KR-r9-TJy">
+                                <rect key="frame" x="16" y="292" width="361" height="510"/>
+                                <color key="backgroundColor" red="0.83216959239999999" green="0.98548370600000001" blue="0.47333085539999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="uyy-VS-bAf">
+                                    <size key="itemSize" width="128" height="128"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="sZ4-Bz-MB3">
+                                        <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="Pug-eH-jR8">
+                                            <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <color key="backgroundColor" red="0.91976243260000001" green="0.7417568564" blue="0.83100117969999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        </collectionViewCellContentView>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="nombre_de_usuario" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tKJ-Us-K9i">
+                                <rect key="frame" x="16" y="131" width="361" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="Fc7-db-Gj9"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Fc7-db-Gj9" firstAttribute="trailing" secondItem="2KR-r9-TJy" secondAttribute="trailing" constant="16" id="CDb-Xk-cdU"/>
+                            <constraint firstItem="2KR-r9-TJy" firstAttribute="top" secondItem="hQU-Jp-o4H" secondAttribute="bottom" constant="111.66666666666666" id="FAp-fe-6t4"/>
+                            <constraint firstItem="NcR-U2-Vd9" firstAttribute="leading" secondItem="Fc7-db-Gj9" secondAttribute="leading" constant="16" id="Ggg-qn-C0W"/>
+                            <constraint firstItem="tKJ-Us-K9i" firstAttribute="leading" secondItem="Fc7-db-Gj9" secondAttribute="leading" constant="16" id="Jpy-Ct-Hwm"/>
+                            <constraint firstItem="Fc7-db-Gj9" firstAttribute="trailing" secondItem="tKJ-Us-K9i" secondAttribute="trailing" constant="16" id="Kme-eS-6SD"/>
+                            <constraint firstItem="hQU-Jp-o4H" firstAttribute="top" secondItem="tKJ-Us-K9i" secondAttribute="bottom" constant="8" id="SGt-6R-A5d"/>
+                            <constraint firstItem="2KR-r9-TJy" firstAttribute="leading" secondItem="Fc7-db-Gj9" secondAttribute="leading" constant="16" id="SuB-80-oNO"/>
+                            <constraint firstItem="Fc7-db-Gj9" firstAttribute="trailing" secondItem="NcR-U2-Vd9" secondAttribute="trailing" constant="16" id="UHb-fu-4ry"/>
+                            <constraint firstItem="hQU-Jp-o4H" firstAttribute="top" secondItem="NcR-U2-Vd9" secondAttribute="bottom" constant="51.333333333333329" id="XnJ-B5-S2O"/>
+                            <constraint firstItem="hQU-Jp-o4H" firstAttribute="leading" secondItem="Fc7-db-Gj9" secondAttribute="leading" constant="16" id="Xzj-E0-Evo"/>
+                            <constraint firstItem="NcR-U2-Vd9" firstAttribute="top" secondItem="Fc7-db-Gj9" secondAttribute="top" constant="22" id="ag2-sV-yr0"/>
+                            <constraint firstItem="Fc7-db-Gj9" firstAttribute="trailing" secondItem="hQU-Jp-o4H" secondAttribute="trailing" constant="16" id="h1l-ql-4Qy"/>
+                            <constraint firstItem="Fc7-db-Gj9" firstAttribute="bottom" secondItem="2KR-r9-TJy" secondAttribute="bottom" constant="16" id="t2V-AE-kQa"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="cuerpo_de_publicacion" destination="hQU-Jp-o4H" id="ujf-ET-8pZ"/>
+                        <outlet property="nombre_de_usuario" destination="tKJ-Us-K9i" id="4oc-bd-upW"/>
+                        <outlet property="seccion" destination="2KR-r9-TJy" id="hsI-P5-F7u"/>
+                        <outlet property="seccion_de_comentarios" destination="2KR-r9-TJy" id="aj9-MY-ms3"/>
+                        <outlet property="titulo_de_publicacion" destination="NcR-U2-Vd9" id="gW9-mw-Y2k"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Jb4-np-Q1Y" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1138" y="-673"/>
+            <point key="canvasLocation" x="1136.6412213740457" y="-673.23943661971839"/>
         </scene>
     </scenes>
     <resources>

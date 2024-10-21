@@ -11,6 +11,11 @@ class ControladorPantallaDelPost: UIViewController {
     
     let proveedor_publicaciones = ProveedorDePublicaciones.autoreferencia
     
+    @IBOutlet weak var titulo_de_publicacion: UILabel!
+    @IBOutlet weak var nombre_de_usuario: UILabel!
+    @IBOutlet weak var cuerpo_de_publicacion: UILabel!
+    @IBOutlet weak var seccion_de_comentarios: UICollectionView!
+    
     public var id_publicacion: Int?
     
     private var publicacion: Publicacion?
@@ -34,6 +39,12 @@ class ControladorPantallaDelPost: UIViewController {
     }
     
     func dibujar_publicacion(){
-        print(publicacion?.body)
+        guard let publicacion_actual = self.publicacion else { //Guard permite si ya tengo algo dentro de mi publicación
+            return
+        }
+        titulo_de_publicacion.text = publicacion_actual.title
+        cuerpo_de_publicacion.text = publicacion_actual.body
+        
+
     }
 }
