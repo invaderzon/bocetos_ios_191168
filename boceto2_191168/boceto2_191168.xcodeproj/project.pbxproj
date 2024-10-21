@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		FB29CDD22CB6D92C00A8A7F3 /* posts.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB29CDD12CB6D92C00A8A7F3 /* posts.swift */; };
 		FB3FE1E52CB985CD0068AC68 /* EstiloCellViewControllerCelular.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB3FE1E42CB985CD0068AC68 /* EstiloCellViewControllerCelular.swift */; };
+		FBC1E33B2CC6B34D00D11118 /* Usuarios.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBC1E33A2CC6B34D00D11118 /* Usuarios.swift */; };
+		FBC1E33D2CC6B91800D11118 /* Comentario.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBC1E33C2CC6B91800D11118 /* Comentario.swift */; };
 		FBDD345F2CC2B9FF00A79761 /* provedor_publicaciones.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBDD345E2CC2B9FF00A79761 /* provedor_publicaciones.swift */; };
 		FBDD34612CC2BAA100A79761 /* ControladorPantallaDelPost.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBDD34602CC2BAA100A79761 /* ControladorPantallaDelPost.swift */; };
 		FBDD34632CC2BB1100A79761 /* mod_navegador_principal.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBDD34622CC2BB1100A79761 /* mod_navegador_principal.swift */; };
@@ -44,6 +46,8 @@
 /* Begin PBXFileReference section */
 		FB29CDD12CB6D92C00A8A7F3 /* posts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = posts.swift; sourceTree = "<group>"; };
 		FB3FE1E42CB985CD0068AC68 /* EstiloCellViewControllerCelular.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EstiloCellViewControllerCelular.swift; sourceTree = "<group>"; };
+		FBC1E33A2CC6B34D00D11118 /* Usuarios.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Usuarios.swift; sourceTree = "<group>"; };
+		FBC1E33C2CC6B91800D11118 /* Comentario.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Comentario.swift; sourceTree = "<group>"; };
 		FBDD345E2CC2B9FF00A79761 /* provedor_publicaciones.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = provedor_publicaciones.swift; sourceTree = "<group>"; };
 		FBDD34602CC2BAA100A79761 /* ControladorPantallaDelPost.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ControladorPantallaDelPost.swift; sourceTree = "<group>"; };
 		FBDD34622CC2BB1100A79761 /* mod_navegador_principal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = mod_navegador_principal.swift; sourceTree = "<group>"; };
@@ -92,6 +96,8 @@
 			isa = PBXGroup;
 			children = (
 				FB29CDD12CB6D92C00A8A7F3 /* posts.swift */,
+				FBC1E33A2CC6B34D00D11118 /* Usuarios.swift */,
+				FBC1E33C2CC6B91800D11118 /* Comentario.swift */,
 			);
 			path = Modelos;
 			sourceTree = "<group>";
@@ -318,10 +324,12 @@
 			files = (
 				FBF8551E2CB433CE00E6122F /* AppDelegate.swift in Sources */,
 				FBF855202CB433CE00E6122F /* SceneDelegate.swift in Sources */,
+				FBC1E33D2CC6B91800D11118 /* Comentario.swift in Sources */,
 				FB29CDD22CB6D92C00A8A7F3 /* posts.swift in Sources */,
 				FBDD345F2CC2B9FF00A79761 /* provedor_publicaciones.swift in Sources */,
 				FBDD34612CC2BAA100A79761 /* ControladorPantallaDelPost.swift in Sources */,
 				FBF855522CB43D7C00E6122F /* VistaDeZelda.swift in Sources */,
+				FBC1E33B2CC6B34D00D11118 /* Usuarios.swift in Sources */,
 				FBF855502CB4376A00E6122F /* ControladorPantallaPrincipalDeColeccion.swift in Sources */,
 				FBDD34632CC2BB1100A79761 /* mod_navegador_principal.swift in Sources */,
 				FB3FE1E52CB985CD0068AC68 /* EstiloCellViewControllerCelular.swift in Sources */,

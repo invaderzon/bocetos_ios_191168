@@ -19,6 +19,8 @@ class ControladorPantallaDelPost: UIViewController {
     public var id_publicacion: Int?
     
     private var publicacion: Publicacion?
+    private var usuario: Usuario?
+    private var lista_comentarios: [Comentario] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -29,13 +31,25 @@ class ControladorPantallaDelPost: UIViewController {
         realizar_descarga_de_informacion()
     }
     
-    func realizar_descarga_de_informacion(){ //Funcion en especifico que se encargue de un conjunto de tareas
-        proveedor_publicaciones.obtener_publicacion(id: self.id_publicacion ?? -1, que_hacer_al_recibir: {
-            [weak self] (publicacion) in self?.publicacion = publicacion
-            DispatchQueue.main.async {
-                self?.dibujar_publicacion()
-            }
-        })
+    func realizar_descarga_de_informacion(){
+        if self.publicacion == nil {
+            proveedor_publicaciones.obtener_publicacion(id: self.id_publicacion ?? -1, que_hacer_al_recibir: {
+                [weak self] (publicacion) in self?.publicacion = publicacion
+                DispatchQueue.main.async {
+                    self?.dibujar_publicacion()
+                }
+            })
+        }
+        
+        else if self.publicacion != nil {
+            proveedor_publicaciones.obtener_usuario(id: publicacion!.userId, que_hacer_al_recibir: {
+                [weak self] (usuario) in self?.usuario = usuario
+                DispatchQueue.main.async {
+                    self?.dibujar_publicacion()
+                }
+            })
+        }
+        
     }
     
     func dibujar_publicacion(){
