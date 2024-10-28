@@ -87,10 +87,13 @@ class ControladorPantallaPrincipalDeColeccion: UICollectionViewController {
     override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath){
         print("Se selaccionó la celda\(indexPath)")
         
+        
         let pantalla_de_publicacion = storyboard?.instantiateViewController(withIdentifier: "PantallaPublicacion") as! ControladorPantallaDelPost
         
+        print(pantalla_de_publicacion)
         //pantalla_de_publicacion.id_publicacion = indexPath.item
         pantalla_de_publicacion.id_publicacion = self.lista_de_publicaciones[indexPath.item].id
+        print(self)
         
         self.navigationController?.pushViewController(pantalla_de_publicacion, animated: true)
         
